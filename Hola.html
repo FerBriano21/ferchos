@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola Mundito</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #3a8dff, #6fb1fc);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      z-index: 2;
+    }
+
+    /* Figuras decorativas */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: float 8s infinite ease-in-out;
+    }
+
+    .circle.small {
+      width: 80px;
+      height: 80px;
+      bottom: 10%;
+      left: 15%;
+    }
+
+    .circle.medium {
+      width: 150px;
+      height: 150px;
+      top: 20%;
+      right: 10%;
+    }
+
+    .circle.large {
+      width: 250px;
+      height: 250px;
+      top: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Ola */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 100% 100% 0 0;
+      animation: wave 10s infinite linear;
+    }
+
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌊 Hola mundito 💙</h1>
+
+  <!-- Figuras -->
+  <div class="circle small"></div>
+  <div class="circle medium"></div>
+  <div class="circle large"></div>
+  <div class="wave"></div>
+</body>
+</html>
